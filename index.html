@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Semana de la Innovación Tecnológica | Inscripción</title>
+  <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+
+  <header class="navbar">
+    <a href="#inicio" class="marca"><span class="marca-icono" aria-hidden="true"></span>USS · Ingeniería de Sistemas</a>
+    <nav>
+      <a href="#inicio">Inicio</a>
+      <a href="#inscritos">Inscritos</a>
+      <a href="#quienes-somos">Nosotros</a>
+    
+    </nav>
+  </header>
+
+  <section class="portada">
+    <img src="img/foto1.jpg" alt="Red de conexiones tecnológicas sobre fondo oscuro"">
+    <div class="portada-texto">
+      <h1>Semana de la Innovación Tecnológica</h1>
+      <p>El futuro cada vez más cerca</p>
+    </div>
+  </section>
+
+  <main>
+    <section id="inicio" class="tarjeta">
+      <h2>Inscripción de participantes</h2>
+      <form id="formulario" novalidate>
+
+        <div class="campo">
+          <label for="nombre">Nombres y apellidos</label>
+          <input type="text" id="nombre" name="nombre" autocomplete="name">
+          <span class="error" id="error-nombre"></span>
+        </div>
+
+        <div class="campo">
+          <label for="correo">Correo institucional</label>
+          <input type="text" id="correo" name="correo" placeholder="usuario@uss.edu.pe" autocomplete="email">
+          <span class="error" id="error-correo"></span>
+        </div>
+
+        <div class="campo">
+          <label for="codigo">Código de estudiante (8 dígitos)</label>
+          <input type="text" id="codigo" name="codigo" inputmode="numeric" maxlength="8">
+          <span class="error" id="error-codigo"></span>
+        </div>
+
+        <div class="campo">
+          <label for="escuela">Escuela profesional</label>
+          <select id="escuela" name="escuela">
+            <option value="">Selecciona una escuela</option>
+            <option value="Ingeniería de Sistemas">Ingeniería de Sistemas</option>
+            <option value="Ingeniería Industrial">Ingeniería Industrial</option>
+            <option value="Arquitectura">Arquitectura</option>
+            <option value="Ingeniería Civil">Ingeniería Civil</option>
+          </select>
+          <span class="error" id="error-escuela"></span>
+        </div>
+
+        <fieldset class="campo">
+          <legend>Talleres de interés</legend>
+          <div class="talleres">
+            <label><input type="checkbox" name="taller" value="Inteligencia Artificial"> Inteligencia Artificial</label>
+            <label><input type="checkbox" name="taller" value="Robótica"> Robótica</label>
+            <label><input type="checkbox" name="taller" value="Ciberseguridad"> Ciberseguridad</label>
+            <label><input type="checkbox" name="taller" value="Desarrollo Web"> Desarrollo Web</label>
+          </div>
+          <span class="error" id="error-talleres"></span>
+        </fieldset>
+
+        <button type="submit" id="btn-inscribir">Inscribirme</button>
+      </form>
+    </section>
+
+    <section id="inscritos" class="tarjeta">
+      <div class="encabezado-lista">
+        <h2>Participantes inscritos</h2>
+        <p class="contador">Total: <strong id="contador">0</strong></p>
+      </div>
+      <p id="vacio" class="vacio">Aún no hay participantes inscritos.</p>
+      <div class="tabla-scroll">
+        <table id="tabla" hidden>
+          <thead>
+            <tr>
+              <th>Nombre</th>
+              <th>Escuela</th>
+              <th>Talleres</th>
+              <th>Código</th>
+              <th>Acción</th>
+            </tr>
+          </thead>
+          <tbody id="lista"></tbody>
+        </table>
+      </div>
+    </section>
+
+    <section id="quienes-somos" class="tarjeta">
+      <h2>Organización</h2>
+      <p>Evento organizado por la Escuela Profesional de Ingeniería de Sistemas de la Universidad Señor de Sipán.</p>
+    </section>
+  </main>
+
+  <footer id="contacto">
+    <p>Escuela Profesional de Ingeniería de Sistemas · Universidad Señor de Sipán</p>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
